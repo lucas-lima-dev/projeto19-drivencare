@@ -4,7 +4,7 @@ import erros from "../errors/index.js"
 import jwt from "jsonwebtoken"
 import "dotenv/config"
 
-async function create({name,email,password,type}) {
+async function create({name,email,password}) {
     const {rowCount} = await pacientsRepository.findByEmail(email)
     if (rowCount) throw erros.duplicatedEmailError(email)
 
