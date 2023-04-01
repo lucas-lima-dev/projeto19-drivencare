@@ -34,10 +34,18 @@ function invalidCredentialsError() {
     }
 }
 
+function invalidUserType(){
+    return{
+        name:"InvalidUserType",
+        message:"You must be a pacient to be allowed to create an account"
+    }
+}
+
 export default {
     conflictError,
     duplicatedEmailError,
     unauthorizedError,
     notFoundError,
-    invalidCredentialsError
+    invalidCredentialsError,
+    invalidUserType
 }

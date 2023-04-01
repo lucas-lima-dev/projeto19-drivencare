@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "console-ninja nodemon src/server.js"
+    "dev": "console-ninja npx nodemon src/server.js",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-import { conflictError } from "../errors"
+import err from "../errors/index.js"
 
 export function validateSchema(schema){
     return (req,res,next) => {
@@ -6,8 +6,9 @@ export function validateSchema(schema){
 
         if(error) {
             const errors = error.details.map((detail) => detail.message)
-            throw conflictError(errors)
+            throw err.conflictError(errors)
         }
+        
         next()
     }
 }
